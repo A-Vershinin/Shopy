@@ -9,14 +9,12 @@ body {
   padding: 0;
   font-size: $font-size-base;
   line-height: $line-height-base;
-  font-family: $ubuntu-regular;
+  font-family: $harmoniaSansProCyr;
   font-weight: 400;
   color: $gray-1;
-  background-color: $bg-4;
+  background-color: $bg-1;
   -webkit-overflow-scrolling: touch; //инерционный скролл на таче
   -webkit-tap-highlight-color: transparent; //устанавливает цвет подсветки ссылкам или любого кликабельного эл-та
-
-
 }
 html {
   @include font-size-base();
@@ -27,7 +25,7 @@ input, textarea {
   border: 1px solid $blue-1;
   font-size: $font-size-base;
   line-height: $line-height-base;
-  font-family: $ubuntu-regular;
+  font-family: $harmoniaSansProCyr;
   border-radius: 5px;
   &::-webkit-input-placeholder {
     color: $gray-1;

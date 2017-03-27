@@ -133,6 +133,7 @@
 }
 //контейнер фикс px
 @mixin container() {
+  min-width: 320px;
   width: $desktop-inner-width; //1170
   margin: 0 auto;
   padding: 0 15px;
@@ -151,17 +152,18 @@
 //контейнер резиновый rem
 @mixin container-fluid() {
   max-width: $desktop-max-widths; //1200
+  min-width: 320px;
   margin: 0 auto;
-  padding: 0 1.25%;
+  padding: 0 1.25%; //30
   @media screen and #{($laptop-point-widths-des)}{
-    max-width: $laptop-max-widths; //992
+    max-width: $laptop-max-widths;
   }
   @media screen and #{($tablet-point-widths-des)} {
-    max-width: $tablet-max-widths; //768
+    max-width: $tablet-max-widths;
     padding: 0 2.5%;
   }
   @media screen and #{($phone-point-widths-des)} {
-    max-width: $phone-max-widths; //300
+    max-width: $phone-max-widths;
     padding: 0 2%;
   }
 }

@@ -6,14 +6,10 @@
   display: none;
   padding: rem(5px) rem(12px);
   font-size: rem(22px);
-  font-family: $montserrat-regular;
+  font-family: $harmoniaSansProCyr;
   text-align: center;
   color: #fff;
   background-color: $accent;
   border-radius: 4px;
-
   cursor: pointer;
-  &:hover {
-    background-color: $black-2;
-  }
 }

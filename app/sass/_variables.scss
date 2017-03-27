@@ -1,10 +1,6 @@
 //Переменные//
 //Шрифты//
-$montserrat-regular: "MontserratRegular", "Arial", sans-serif;
-$montserrat-bold: "MontserratBold", "Arial", sans-serif;
-$ubuntu-regular: "UbuntuRegular", "Arial", sans-serif;
-$ubuntu-medium: "UbuntuMedium", "Arial", sans-serif;
-$ubuntu-bold: "UbuntuBold", "Arial", sans-serif;
+$harmoniaSansProCyr: "HarmoniaSansProCyr", "Arial", sans-serif;
 
 //Цвета, фон//
 $accent: rgba(44, 199, 193, .7);
@@ -13,45 +9,22 @@ $accent-active: lighten($accent, 35%);
 $gray-1: #828282;
 $gray-2: #6a7079;
 $gray-3: #828689;
-$gray-4: #abb1ba;;
-$gray-5: #999;
-$gray-6: #cacaca;
-$gray-7: #ececec;
-$gray-8: #9097a1;
-$gray-9: #777a7d;
-
-
-$black-1: rgba(0,0,0, .3);
-$black-2: #231f20;
 
 $blue-1: #2cc7c1;
-$blue-2: #4ed2d7;
-$blue-3: #7ea4e8;
-$blue-4: rgba(#2cc7c1, .7);
-$blue-6: #00acee;
 
 $red-1: #e62a33;
 $green-1: #20d312;
 
 $light-1: #ffffff;
-$light-2: #f0f0f1;
-$light-3: #ececec;
-$light-3: #efefef;
+
 
 //background-colors:
 $bg-1: #525b64;
 $bg-2: #6a7079;
-$bg-3: #cdd0d2;
-$bg-4: #fff;
-$bg-7: #3f464c;
 
-$bg-gradient: linear-gradient(to top, #dfdfdf 0%, #fefefe 100%);
 
 //shadows, borders, rgba, other
 $border-1: rgba(130, 134, 137, .12);
-$border-2: #ccc;
-$text-shadow-1: 0 1px 0 white;
-$box-shadow-1: 0 1px 0 white, inset 0 1px 0 rgba(0, 0, 0, 0.4);
 
 
 //размер шрифта//
@@ -66,13 +39,13 @@ $font-size-phone: 13px;
 //брейкпоинты//
 //Mobile//
 $desktop-point-widths: "(min-width: 1200px)";
-$laptop-point-widths: "(min-width: 868px)";
-$tablet-point-widths: "(min-width: 520px)";
+$laptop-point-widths: "(min-width: 992px)";
+$tablet-point-widths: "(min-width: 576px)";
 //Desktop//
 $desktop-point-widths-des: "(max-width: 1200px)";
 $laptop-point-widths-des: "(max-width: 992px)";
 $tablet-point-widths-des: "(max-width: 768px)";
-$phone-point-widths-des: "(max-width: 520px)";
+$phone-point-widths-des: "(max-width: 576px)";
 
 //макс-ширина на устройствах//
 $desktop-max-widths: 1170px;
@@ -88,9 +61,9 @@ $phone-min-widths: 480px;
 
 //ширины контейнера//
 $desktop-inner-width: 1170px;
-$laptop-inner-widths: 950px;
-$tablet-inner-widths: 740px;
-$phone-inner-widths: 300px;
+$laptop-inner-widths: 960px;
+$tablet-inner-widths: 720px;
+$phone-inner-widths: 540px;
 
 //Ретина//
 $retina: "(min-resolution: 144dpi), (min-resolution: 1.5dppx)";

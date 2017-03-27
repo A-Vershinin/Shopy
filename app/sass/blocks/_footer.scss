@@ -10,109 +10,22 @@
   text-align: left;
   font-size: rem(14px);
   line-height: rem(40px);
-  font-family: $ubuntu-regular;
+  font-family: $harmoniaSansProCyr;
   font-weight: 400;
   color: rgba(202, 202, 202, .5);
-  background-color: $bg-7;
-  span {
-    font-family: $ubuntu-medium;
-    font-weight: 500;
-  }
+  background-color: $bg-1;
 }
-.footer__block {
-  font-family: $ubuntu-regular;
-  font-weight: 400;
-}
-.footer__title {
-  margin-bottom: rem(25px);
-  color: $light-1;
-  font-size: rem(25px);
-  line-height: rem(25px);
-  span {
-    font-family: $ubuntu-bold;
-    font-weight: 700;
-  }
-}
-.footer__text {
-  margin-bottom: rem(25px);
-  color: #cdd0d2;
-  font-size: rem(16px);
-  line-height: rem(25px);
-  a {
-    color: $blue-1;
-    text-decoration: none;
-    &:hover, &:active {
-      color: $accent-active;
-    }
-  }
-}
-.footer__socials {
-  font-size: 0;
-  img {
-    display: inline-block;
-    vertical-align: top;
-  }
-}
-.footer__socials-like,
-.footer__socials-follow {
-  font-size: rem(16px);
-  margin-right: rem(20px);
-}
-.footer__socials-follow {
-  margin-right: 0;
-}
-.footer__list-contacts {
-  @extend %ul-reset;
-  font-size: 0;
-}
-.footer__item-contacts {
-  margin-bottom: rem(10px);
-}
-.footer__link-contacts {
-  display: block;
-  font-size: rem(18px);
-  line-height: rem(22px);
-  font-weight: 500;
-  font-family: $ubuntu-medium;
-  color: $blue-1;
-  text-decoration: none;
-  cursor: pointer;
-  &:hover, &:active  {
-    color: $accent-active;
-    text-decoration: none;
-  }
-  span {
-    font-size: rem(18px);
-    line-height: rem(20px);
-  }
-  .fa {
-    margin-right: rem(10px);
-    font-size: rem(20px);
-  }
-}
+
+
+
 @media screen and #{($desktop-point-widths-des)} {
-  .footer__block {
-    margin-bottom: rem(20px);
-  }
+
 }
 @media screen and #{($laptop-point-widths-des)} {
-  .footer__top {
-    padding-top: rem(40px);
-    padding-bottom: rem(20px);
-  }
+
 }
 @media screen and #{($tablet-point-widths-des)} {
-  .footer__title {
-    text-align: center;
-  }
-  .footer__item-contacts {
-    display: inline-block;
-    vertical-align: top;
-    margin-right: rem(15px);
-  }
-  .footer__bottom {
-    text-align: center;
-  }
+
 }
 @media screen and #{($phone-point-widths-des)} {
 }
