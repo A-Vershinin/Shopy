@@ -9,7 +9,7 @@ document.addEventListener("DOMContentLoaded", function() {
       // if (document.documentElement.html.className == "no-js") {
       //   document.body.classList.remove("no-js");
       // }
-      console.log(document.documentElement.className(no-js));
+      // console.log(document.documentElement);
     }
 
     // btn Up
