@@ -1,0 +1,14 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="17" height="15" viewBox="0 0 17 15">
+  <defs>
+    <style>
+      .cls-1 {
+        font-size: 17px;
+        fill: #2cc7c1;
+        text-anchor: end;
+        font-family: FontAwesome;
+        text-transform: uppercase;
+      }
+    </style>
+  </defs>
+  <text id="_" data-name="" class="cls-1" x="17" y="12.499"><tspan x="17"></tspan></text>
+</svg>

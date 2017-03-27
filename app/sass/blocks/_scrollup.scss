@@ -1,0 +1,19 @@
+.scrollup {
+  position: fixed;
+  bottom: rem(75px);
+  right: rem(40px);
+  z-index: 100;
+  display: none;
+  padding: rem(5px) rem(12px);
+  font-size: rem(22px);
+  font-family: $montserrat-regular;
+  text-align: center;
+  color: #fff;
+  background-color: $accent;
+  border-radius: 4px;
+
+  cursor: pointer;
+  &:hover {
+    background-color: $black-2;
+  }
+}

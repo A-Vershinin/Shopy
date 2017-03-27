@@ -1,0 +1,8 @@
+{
+  "name": "Shopy",
+  "devDependencies": {
+    "normalize-css": "^5.0.0",
+    "picturefill": "^3.0.2",
+    "jquery": "^3.1.1"
+  }
+}

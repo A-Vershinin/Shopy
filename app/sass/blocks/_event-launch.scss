@@ -1,0 +1,198 @@
+.event-launch {
+  position: relative;
+  padding-top: rem(150px);
+  padding-bottom: rem(150px);
+  text-align: center;
+  color: $gray-2;
+  background-color: #f3f3f3;
+}
+.event-launch__title {
+  margin-bottom: rem(25px);
+  color: $gray-2;
+  font-size: rem(30px);
+  line-height: rem(55px);
+  font-family: $montserrat-regular;
+  font-weight: 400;
+  text-transform: uppercase;
+}
+.event-launch__desc {
+  max-width: 70%;
+  margin: 0 auto rem(50px);
+  font-size: rem(22px);
+  line-height: rem(30px);
+  font-family: $ubuntu-regular;
+  font-weight: 400;
+}
+.event-launch__block {
+  padding: rem(52px) 0;
+  background-color: #fff;
+}
+.event-launch__form {
+  padding: 0 rem(50px);
+}
+.event-launch__form .form-group {
+  position: relative;
+}
+.event-launch__form .form-control,
+.event-launch__form .form-control-select {
+  height: rem(51px);
+  padding-left: rem(20px);
+  padding-right: rem(20px);
+  font-size: rem(18px);
+  line-height: rem(40px);
+  font-family: $ubuntu-regular;
+  font-weight: 400;
+  color: #6a7079;
+  background-color: #efefef;
+  border-radius: 4px;
+  &:focus {
+    border: 1px solid $blue-1;
+    background-color: #fff;
+    box-shadow: none;
+  }
+  &--name, &--mail {
+    padding-right: rem(35px);
+  }
+}
+.event-launch__form .form-control-select {
+  display: block;
+  padding: 0;
+  box-sizing: border-box;
+}
+.event-launch__form .select2-container .select2-choice {
+  height: 100%;
+  padding: 0;
+  padding-left: rem(15px);
+  color: #6a7079;
+  font-size: rem(18px);
+  line-height: rem(40px);
+  font-family: $ubuntu-regular;
+  text-align: left;
+  background-image: none;
+  background-color: #efefef;
+  border-color: #ccc;
+  box-sizing: border-box;
+}
+.event-launch__form .select2-container-active {
+  border-color: $blue-1;
+}
+.event-launch__form .select2-container .select2-choice > .select2-chosen {
+  margin-right: 0;
+  padding-right: rem(30px);
+  font-size: rem(18px);
+  line-height: rem(51px);
+  background-image: none;
+  background-color: transparent;
+  box-sizing: border-box;
+}
+.event-launch__form .select2-dropdown-open {
+  .select2-choice {
+    border-color: $blue-1;
+    background-color: $blue-1;
+    color: $light-1;
+    box-shadow: none;
+  }
+}
+body .select2-drop {
+  box-shadow: none;
+}
+body .select2-drop,
+body .select2-drop-active .select2-results {
+  background-color: #525b64;
+}
+body .select2-drop .select2-result {
+  color: $blue-1;
+}
+body .select2-drop .select2-highlighted {
+  color: $light-1;
+  background-color: transparent;
+}
+
+.event-launch__form .select2-container .select2-choice .select2-arrow {
+  width: rem(28px);
+  border-left: 0;
+  background-image: none;
+  background-color: transparent;
+  & b {
+    background: none;
+  }
+  &::before {
+    content: '';
+    display: block;
+    position: absolute;
+    top: rem(20px);
+    left: 0;
+    border: rem(8px) solid transparent;
+    border-top: rem(10px) solid rgba(0, 0, 0, .3);
+  }
+}
+.form-control__check {
+  position: absolute;
+  display: inline-block;
+  vertical-align: top;
+  top: 50%;
+  right: 12%;
+  transform: translateY(-50%);
+  color: $blue-1;
+  font-size: rem(20px);
+  opacity: 0;
+  &--has-error {
+    color: $red-1;
+    opacity: 1;
+  }
+  &--has-success {
+    color: $green-1;
+    opacity: 1;
+  }
+}
+.has-success .form-control {
+  border-color: $green-1;
+}
+.has-error .form-control {
+  border-color: $red-1;
+}
+.has-error input[type="text"] + .form-control__check,
+.has-error input[type="email"] + .form-control__check {
+  color: $red-1;
+  opacity: 1;
+}
+
+.event-launch__form .form-inline__btn {
+  max-width: rem(156px);
+  height: rem(50px);
+  padding-left: rem(30px);
+  padding-right: rem(42px);
+  font-size: rem(16px);
+  line-height: rem(42px);
+  background-color: #7ea4e8;
+  border: none;
+  &:focus {
+    color: $light-1;
+    outline: none;
+  }
+  .fa {
+    margin-left: 6px;
+  }
+}
+@media screen and #{($desktop-point-widths-des)} {
+  .event-launch {
+    padding-top: rem(80px);
+    padding-bottom: rem(80px);
+  }
+}
+@media screen and #{($laptop-point-widths-des)} {
+  .event-launch {
+    padding-top: rem(50px);
+    padding-bottom: rem(50px);
+  }
+}
+@media screen and #{($tablet-point-widths-des)} {
+  .event-launch {
+    padding-top: rem(25px);
+    padding-bottom: rem(25px);
+  }
+
+}
+@media screen and #{($phone-point-widths-des)} {
+
+}

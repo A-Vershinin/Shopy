@@ -1,0 +1,65 @@
+
+/* Шрифты */
+/* font-family: "MontserratRegular"; */
+@font-face {
+	font-family: "MontserratRegular";
+	src: url("../fonts/MontserratRegular/Montserrat-Regular.woff") format("woff"),
+	url("../fonts//MontserratRegular/Montserrat-Regular.woff2") format("woff2");
+	font-weight: normal;
+	font-style: normal;
+}
+/* font-family: "MontserratBold"; */
+@font-face {
+	font-family: "MontserratBold";
+	src: url("../fonts//MontserratBold/Montserrat-Bold.woff") format("woff"),
+	url("../fonts//MontserratBold/Montserrat-Bold.woff2") format("woff2");
+	font-weight: normal;
+	font-style: normal;
+}
+/* font-family: "UbuntuRegular"; */
+@font-face {
+	font-family: "UbuntuRegular";
+	src: url("../fonts//UbuntuRegular/Ubuntu-R.woff") format("woff"),
+	url("../fonts/UbuntuRegular/Ubuntu-R.woff2") format("woff2");
+	font-weight: normal;
+	font-style: normal;
+}
+/* font-family: "UbuntuMedium"; */
+@font-face {
+	font-family: "UbuntuMedium";
+	src: url("../fonts/UbuntuMedium/Ubuntu-Medium.woff") format("woff"),
+	url("../fonts/UbuntuMedium/Ubuntu-Medium.woff2") format("woff2");
+	font-weight: normal;
+	font-style: normal;
+}
+/* font-family: "UbuntuBold"; */
+@font-face {
+	font-family: "UbuntuBold";
+	src: url("../fonts/UbuntuBold/Ubuntu-Bold.woff") format("woff"),
+	url("../fonts/UbuntuBold/Ubuntu-Bold.woff2") format("woff2");
+	font-weight: normal;
+	font-style: normal;
+}
+/* font-family: "UbuntuBold"; */
+@font-face {
+	font-family: "FontAwesome";
+	src: url("../fonts/FontAwesome/fontawesome-webfont.woff") format("woff"),
+	url("../fonts/FontAwesome/fontawesome-webfont.woff2") format("woff2"),
+	url("../fonts/FontAwesome/fontawesome-webfont.svg") format("svg"),
+	url("../fonts/FontAwesome/fontawesome-webfont.ttf") format("ttf"),
+	url("../fonts/FontAwesome/fontawesome-webfont.eot") format("eot");
+	font-weight: normal;
+	font-style: normal;
+}
+
+@mixin Ubuntu($style: "regular") {
+	@if ($style == "regular") {
+		font-family: "UbuntuRegular";
+		}
+	@else if ($style == "medium") {
+		font-family: "UbuntuMedium";
+	}
+	@else if($style == "bold") {
+		font-family: "UbuntuBold";
+	}
+}

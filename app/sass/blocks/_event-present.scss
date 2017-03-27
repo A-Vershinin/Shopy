@@ -1,0 +1,201 @@
+.event-present {
+  position: relative;
+  padding-top: rem(105px);
+  padding-bottom: rem(90px);
+  background-color: $bg-4;
+  @extend %clearfix;
+}
+.event-shedule {
+  margin-bottom: rem(120px);
+}
+.event-shedule__desc {
+  color: $gray-1;
+  font-weight: 400;
+}
+.event-shedule__title {
+  color: $gray-3;
+  margin-bottom: rem(30px);
+  font-size: rem(30px);
+  line-height: rem(30px);
+  font-family: $montserrat-regular;
+  text-transform: uppercase;
+}
+.event-shedule__text {
+  margin-bottom: rem(30px);
+  font-size: rem(17px);
+  line-height: rem(25px);
+  font-family: $ubuntu-regular;
+  &--lg {
+    font-size: rem(22px);
+    line-height: rem(30px);
+  }
+}
+.event-shedule__link {
+  display: block;
+  color: $blue-1;
+  font-size: rem(17px);
+  line-height: rem(17px);
+  font-family: $montserrat-bold;
+  font-weight: 700;
+  text-transform: uppercase;
+  .fa {
+    margin-right: 8px;
+  }
+  &:hover {
+    color: $accent;
+    text-decoration: none;
+  }
+  &:active {
+    color: $black-2;
+  }
+}
+.event-present .event-shedule__link:focus {
+  color: $black-2;
+  outline: none;
+  text-decoration: none;
+}
+.event-shedule__tabs {
+  border: 3px solid $gray-7;
+  border-radius: 4px;
+}
+.event-shedule__tabs .tab-content {
+  @extend %clearfix;
+  position: relative;
+  padding: rem(30px) rem(20px);
+}
+.event-shedule__tabs .tab-pane {
+  @extend %clearfix;
+}
+.event-shedule__tabs .nav-tabs > li > a {
+  color: $gray-4;
+  font-size: rem(18px);
+  line-height: rem(34px);
+  font-family: $ubuntu-bold;
+  font-weight: 700;
+  text-transform: uppercase;
+  background-color: $gray-7;
+  border: none;
+  border-radius: 0;
+  &:hover, &:active {
+    color: $accent;
+  }
+}
+.event-shedule__tabs .nav-tabs > li.active >  a {
+  color: $accent;
+  background-color: $bg-4;
+}
+.event-shedule__tabs .tab-content {
+  padding: rem(30px) rem(18px);
+  color: $gray-5;
+  font-size: rem(17px);
+  line-height: rem(26px);
+  font-family: $ubuntu-regular;
+  font-weight: 400;
+}
+.event-shedule__collapse-list {
+  @extend %ul-reset;
+
+}
+.event-shedule__collapse-item {
+  margin-bottom: rem(21px);
+}
+.event-shedule__collapse-row {
+  font-size: 0;
+  @extend %clearfix;
+}
+.event-shedule__collapse-time {
+  float: left;
+  margin-right: rem(26px);
+  padding: 0 rem(7px);
+  color: $light-1;
+  font-size: rem(17px);
+  line-height: rem(27px);
+  font-family: $ubuntu-medium;
+  font-weight: 500;
+  text-transform: uppercase;
+  background-color: $blue-1;
+  border-radius: 3px;
+  box-sizing: border-box;
+}
+.event-shedule__collapse-link {
+  display: inline-block;
+  vertical-align: top;
+  display: block;
+  width: calc(100% - 91px - 26px - 20px);
+  float: left;
+  color: #747a84;
+  font-size: rem(18px);
+  line-height: rem(27px);
+  font-family: U$ubuntu-medium;
+  font-weight: 500;
+  &:hover {
+    text-decoration: none;
+    color: #747a84;
+  }
+}
+.event-shedule .event-shedule__collapse-link:focus {
+  color: $black-2;
+  outline: none;
+  text-decoration: none;
+}
+.event-shedule__collapse-state {
+  float: right;
+  font-size: rem(21px);
+  color: $blue-1;
+  .fa {
+    line-height: rem(27px);
+    text-indent: none;
+  }
+}
+.event-shedule__collapse-text {
+  padding-top: rem(21px);
+  color: $gray-5;
+  font-size: rem(17px);
+  line-height: rem(25px);
+  font-family: $ubuntu-regular;
+  font-weight: 400;
+}
+
+@media screen and #{(min-width: 768px)} {
+  .event-shedule__tabs .nav-tabs.nav-justified > .active > a,
+  .event-shedule__tabs .nav-tabs.nav-justified > .active > a:hover,
+  .event-shedule__tabs .nav-tabs.nav-justified > .active > a:focus {
+    border: none;
+    border-radius: 0;
+  }
+}
+@media screen and #{($desktop-point-widths-des)} {
+  .event-shedule {
+    margin-bottom: rem(80px);
+  }
+}
+@media screen and #{($laptop-point-widths-des)} {
+
+  .event-shedule {
+    margin-bottom: rem(60px);
+  }
+  .event-shedule__desc {
+    margin-bottom: rem(30px);
+  }
+}
+@media screen and #{($tablet-point-widths-des)} {
+  .event-present {
+    padding-top: rem(40px);
+    padding-bottom: rem(40px);
+  }
+  .event-shedule .nav-tabs.nav-justified > li > a,
+  .event-shedule .nav-tabs.nav-justified > .active > a {
+    border: none;
+    border-radius: 0;
+  }
+  .event-shedule {
+    margin-bottom: rem(30px);
+  }
+  .event-shedule__title {
+    text-align: center;
+  }
+
+}
+@media screen and #{($phone-point-widths-des)} {
+
+}

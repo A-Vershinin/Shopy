@@ -1,0 +1,40 @@
+// подключаем все кусочки кодов в главный файл//
+
+
+// Переменные и миксины//
+@import "_variables.scss";
+@import "_mixins.scss";
+
+// Глобальные стили для всего проекта//
+@import "_fonts.scss";
+@import "_main.scss";
+// @import "sprites/sprite.scss";
+
+//Стили widgets//
+// @import "widgets/_fancybox.scss";
+// @import "widgets/_owlCarousel.scss";
+// @import "widgets/_slick.scss";
+
+//Стили BEM-блоков//
+// index.html
+@import "blocks/_btn.scss";
+@import "blocks/_container.scss";
+@import "blocks/_wrapper.scss";
+@import "blocks/_header.scss";
+@import "blocks/_footer.scss";
+@import "blocks/_scrollup.scss";
+@import "blocks/_status-popup.scss";
+@import "blocks/_logo.scss";
+@import "blocks/_event.scss";
+@import "blocks/_event-present.scss";
+@import "blocks/_event-promo.scss";
+@import "blocks/_event-gallery.scss";
+@import "blocks/_event-launch.scss";
+@import "blocks/_brands.scss";
+@import "blocks/_contacts.scss";
+// @import "blocks/_contact-form.scss";
+// @import "blocks/_socials.scss";
+
+
+//catalog.html
+// @import "blocks/catalog-page.scss";

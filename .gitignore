@@ -1,0 +1,14 @@
+node_modules/
+app/bower_modules
+app/bower
+.DS_Store
+Thumbs.db
+.idea
+*.sublime*
+*.log
+*.psd
+*.ai
+*.pdf
+*.iml
+css/*.css
+build/

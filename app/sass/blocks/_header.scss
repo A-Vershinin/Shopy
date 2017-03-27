@@ -1,0 +1,84 @@
+.header {
+  position: relative;
+
+  height: 100vh;
+  min-height: 500px;
+  background-color: $bg-1;
+  background-image: url("../img/bg/bg1@1x.jpg");
+  @extend %cover;
+  @media #{$retina} {
+    background-image: url("../img/bg/bg1@2x.jpg");
+  }
+}
+.header__wrap {
+  display: table;
+  width: 100%;
+  height: 100%;
+}
+.header__block {
+  display: table-row;
+}
+.header__block-cell {
+  display: table-cell;
+  text-align: center;
+  vertical-align: middle;
+}
+.header__block-center {
+  max-width: 615px;
+  margin: 0 auto;
+  padding: 0 rem(15px);
+  color: $light-1;
+  text-align: center;
+}
+.header__logo {
+  @include inline-block($valign: top);
+  margin-bottom: 35px;
+}
+.header__title {
+  margin-bottom: 35px;
+  font-size: rem(31px);
+  line-height: rem(33px);
+  font-weight: 700;
+  font-family: $montserrat-bold;
+}
+.header__text {
+  margin-bottom: 40px;
+  font-size: rem(20px);
+  line-height: rem(28px);
+  font-family: $ubuntu-regular;
+  font-weight: 400;
+}
+.header__buttons {
+  font-size: 0;
+  & .btn {
+    max-width: 156px;
+    height: rem(50px);
+    margin-right: 30px;
+    padding: 0 rem(36px);
+    font-size: rem(16px);
+    line-height: rem(50px);
+    border: none;
+    &:focus {
+      color: $light-1;
+      outline: none;
+    }
+  }
+  .fa {
+    margin-left: 6px;
+  }
+}
+
+
+@media screen and #{($laptop-point-widths-des)}{
+
+}
+@media screen and #{($tablet-point-widths-des)} {
+
+}
+@media screen and #{($phone-point-widths-des)} {
+  .header__buttons .btn {
+    display: block;
+    margin: 0 auto;
+    margin-bottom: 20px;
+  }
+}
