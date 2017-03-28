@@ -1,6 +1,7 @@
 "use strict";
 
 var gulp = require("gulp"), //подключаем Gulp
+    pug = require('gulp-pug'), //шаблогизатор для разметки
     sass = require("gulp-sass"), //подключаем Sass-пакет
     plumber = require("gulp-plumber"), //подключаем Пламбер
     postcss = require("gulp-postcss"), //подключаем postcss
@@ -37,6 +38,23 @@ var gulp = require("gulp"), //подключаем Gulp
 // .pipe(_if(!production, sourcemaps.write())) // пишем сормепы в дев-режиме
 // .pipe(_if(production, gzip())) // если продакшен - жмем gzip
 
+
+//pug
+gulp.task('pug', function() {
+	gulp.src("app/templates/pages/*.pug")
+		.pipe(plumber())
+		.pipe(pug({pretty: "  "}))
+		.on('error', notify.onError(function(error) {
+			return {
+				title: 'Pug',
+				message:  error.message
+			}
+		 }))
+		.pipe(gulp.dest("app/pages"))
+		.pipe(server.reload({stream: true}));
+});
+
+
 gulp.task("styles", function() {
   gulp.src("app/sass/style.scss")
     .pipe(plumber({ //Запрещаем ошибкам прерывать скрипт
@@ -52,7 +70,7 @@ gulp.task("styles", function() {
       errLogToConsole: true,
       "sourcemap=none": true,
       noCache: true,
-      compass: true
+      outputStyle: 'expanded'
     }))
     .pipe(postcss([
       autoprefixer({browsers: ["last 3 versions", "> 2%"], cascade: false}),
@@ -68,24 +86,15 @@ gulp.task("styles", function() {
     .pipe(server.reload({stream: true})); //После сборки делаем перезагрузку страницы
 });
 
-gulp.task("htmlChange", function () {
-  return gulp.src([
-    "app/*.html"
-  ], {
-    base: "app"
-  })
-    .pipe(useref())
-    .pipe(gulp.dest("build"))
-    .pipe(server.reload({stream: true}));
-});
+
 gulp.task("JsChange", function () {
   return gulp.src([
     "app/js/**/*.js"
   ], {
     base: "app"
   })
-    .pipe(gulp.dest("build"))
-    .pipe(server.reload({stream: true}));
+    .pipe(gulp.dest("build"));
+    // .pipe(server.reload({stream: true}));
 });
 
 gulp.task("serve", function() {
@@ -96,9 +105,10 @@ gulp.task("serve", function() {
     ui: false
   });
 
-  gulp.watch("app/sass/**/*.{scss,sass}", ["styles"]);  //Наблюдение за scss файлами в папке scss
-  gulp.watch("app/js/*.js", ["JsChange"]);  //Наблюдение за js файлами в папке проекта
-  gulp.watch("app/*.html", ["htmlChange"]); //Наблюдение за html файлами в папке проекта
+  gulp.watch("app/templates/**/*.pug", ["pug"]);
+  gulp.watch("app/sass/**/*.{scss,sass}", ["styles"]);
+  gulp.watch("app/js/*.js", ["JsChange"]);
+  gulp.watch("app/pages/*.html", ["useref"]);
   gulp.watch("build/**/*").on("change", server.reload);
 });
 // ====================================================
@@ -115,19 +125,16 @@ gulp.task("copy", function() {
     "app/favicons/*.*",
     "app/img/**/*",
     "app/js/**",
-    "app/php/**",
-    "app/*.html"
+    "app/php/**"
   ], {
     base: "app"
   })
     .pipe(gulp.dest("build"));
 });
-
 gulp.task('useref', function() {
-	return gulp.src('app/index.html')
+	return gulp.src('app/pages/*.html')
 		.pipe(useref()) //Выполняет объединение файлов в один по указанным в разметке html комментариев.
-		.pipe(gulp.dest('build/'))
-    .pipe(server.reload({stream: true}));
+		.pipe(gulp.dest('build/'));
 });
 
 // Оптимизация картинок
@@ -232,9 +239,7 @@ gulp.task("js:polyfills", function() {
 gulp.task("php", function() {
   return gulp.src("app/**/*.php")
   .pipe(sourcemaps.init())
-  .pipe(gulp.dest("build/php"))
-  .pipe(sourcemaps.write())
-  .pipe(reload({stream : true}));
+  .pipe(gulp.dest("build/php"));
 });
 //Иконочные шрифты
 gulp.task("icon-fonts", function() {
@@ -247,12 +252,13 @@ gulp.task("icon-fonts", function() {
 gulp.task("build", function(fn) {
   run(
     "clean",
+    "pug",
     "copy",
     "useref",
     "styles",
     "css:vendor",
     "js:common",
-    "images",
+    // "images",
     "png:sprite",
     "svg:sprite",
     "js:vendor",
@@ -287,4 +293,5 @@ gulp.task("watch", function(){
 gulp.task("default", ["serve", "watch"]);
 
 
-//todo сделать таски : JSlint, ES6 синтаксис, gh-pages в гит, тесты, wc3 таск проверки
+//todo сделать таски : линтинг стилей, JSlint, ES6 синтаксис, gh-pages в гит,
+//тесты, wc3 таск проверки

@@ -134,7 +134,7 @@
 //контейнер фикс px
 @mixin container() {
   min-width: 320px;
-  width: $desktop-inner-width; //1170
+  width: $desktop-inner-width; //1200
   margin: 0 auto;
   padding: 0 15px;
   @media screen and #{($laptop-point-widths-des)}{

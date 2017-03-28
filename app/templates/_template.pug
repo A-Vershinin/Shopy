@@ -1,0 +1,62 @@
+block variables
+
+doctype
+html(lang="en").no-js
+  head
+    meta(charset="utf-8")
+    meta(name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1")
+    meta(http-equiv="x-ua-compatible" content="ie=edge")
+    meta(name="format-detection" content="telephone=no")
+    title #{title}
+    meta(name="author" content="Anatoliy Vershinin" )
+    meta(name="description" content="description")
+    meta(name="keywords" content="keywords")
+
+    // favicon block start
+    //- link(rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png")
+    //- link(rel="icon" type="image/png" href="favicons/favicon-32x32.png" sizes="32x32")
+    //- link(rel="icon" type="image/png" href="favicons/favicon-16x16.png" sizes="16x16")
+    //- link(rel="manifest" href="/manifest.json")
+    //- meta(name="theme-color" content="#ffffff")
+    // favicon block end
+    |
+    |
+    <!-- build:css css/libs.min.css -->
+    link(href="../bower/normalize-css/normalize.css" rel="stylesheet")
+
+    |
+    |
+    <!-- endbuild -->
+    |
+    link(rel='stylesheet' href='css/style.css')
+    script(src='https://cdn.polyfill.io/v2/polyfill.min.js' acync)
+
+    <!--[if lt IE 9]>
+      script(src="http://cdnjs.cloudflare.com/ajax/libs/html5shiv/3.7.2/html5shiv.min.js")
+    <![endif]-->
+    |
+    |
+  body
+    |
+    |
+    <!--[inf lt IE 9]
+        p.browsehappy
+          | Вы используете strong устаревший  браузер.
+          | Пожалуйста a.(href="http://browsehappy.com/") обновите его.
+    <![endif]-->
+    |
+    svg(display="none", xmlns="http://www.w3.org/2000/svg")
+      //- symbol(id="icon-boat", viewbox="0 0 508.52 508.52")
+      //-   path(d="M434")
+    |
+    |
+    block content
+    |
+    |
+    <!-- build:js js/libs.min.js -->
+    script(src="../bower/jQuery/dist/jquery.min.js")
+    |
+    |
+    <!-- endbuild -->
+    //- /*script(src='js/js.libs.js' defer)*/
+    script(src='js/common.js' defer)

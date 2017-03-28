@@ -3,12 +3,14 @@
 $harmoniaSansProCyr: "HarmoniaSansProCyr", "Arial", sans-serif;
 
 //Цвета, фон//
-$accent: rgba(44, 199, 193, .7);
-$accent-active: lighten($accent, 35%);
+$accent: #ff5912;
+$accent-active: darken($accent, 20%);
 
-$gray-1: #828282;
-$gray-2: #6a7079;
-$gray-3: #828689;
+$gray-1: #34404b;
+
+
+
+
 
 $blue-1: #2cc7c1;
 
@@ -19,12 +21,12 @@ $light-1: #ffffff;
 
 
 //background-colors:
-$bg-1: #525b64;
+$bg-1: #fff;
 $bg-2: #6a7079;
 
 
 //shadows, borders, rgba, other
-$border-1: rgba(130, 134, 137, .12);
+$border-1: rgba(230, 235, 235, .5);
 
 
 //размер шрифта//

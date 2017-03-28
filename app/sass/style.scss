@@ -17,13 +17,15 @@
 
 //Стили BEM-блоков//
 // index.html
+@import "blocks/_logo.scss";
 @import "blocks/_btn.scss";
 @import "blocks/_container.scss";
 @import "blocks/_wrapper.scss";
 @import "blocks/_header.scss";
+@import "blocks/_socials.scss";
+@import "blocks/_menu.scss";
 @import "blocks/_footer.scss";
 @import "blocks/_scrollup.scss";
-@import "blocks/_logo.scss";
 
 // @import "blocks/_contact-form.scss";
 // @import "blocks/_socials.scss";

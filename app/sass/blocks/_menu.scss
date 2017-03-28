@@ -1,0 +1,35 @@
+.menu {
+  max-width: 585px;
+  display: inline-block;
+  vertical-align: top;
+  font-size: 16px;
+}
+.menu__list {
+ @extend %ul-reset;
+ font-size: 0;
+}
+.menu__item {
+  display: inline-block;
+  vertical-align: top;
+  font-size: 16px;
+}
+.menu__link {
+  position: relative;
+  display: block;
+  padding: 13px 20px;
+  font-size: rem(16px);
+  line-height: 1;
+  font-weight: 400;
+  font-family: harmoniaSansProCyr;
+  text-decoration: none;
+  color: $gray-1;
+  background-color: transparent;
+  cursor: pointer;
+  transition: .3s;
+  &:hover {
+    color: $accent;
+  }
+  &:active {
+    color: $accent-active;
+  }
+}

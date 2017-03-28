@@ -1,0 +1,21 @@
+extends ../_template
+
+block variables
+  - var title = 'Shopy'
+
+block content
+
+  .wrapper
+      //HEADER
+      include ../common/_header
+      //END HEADER
+      |
+      |
+      //MAIN CONTENT
+      main.content
+        section.arrivals
+          .container
+      //END CONTENT
+      |
+      |
+      include ../common/_footer
