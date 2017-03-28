@@ -37,8 +37,7 @@
     width: rem(10px);
     height: rem(15px);
     margin-bottom: rem(10px);
-    background-color: #fff;
-    background-color: #444;
+    background-color: #999;
     &:last-child {
       margin-bottom: 0;
     }
@@ -52,12 +51,10 @@
   max-width: 570px;
   position: absolute;
   z-index: 30;
-  left: 15%;
+  left: 25%;
   top: 50%;
   transform: translateY(-50%);
   font-family: "harmoniaSansProCyr";
-  background-color: #ccc;
-
 }
 .slider__title {
   margin-bottom: 20px;

@@ -1,7 +1,7 @@
 .header {
   position: relative;
   color: $gray-1;
-  background-color: $bg-1;
+  background-color: #fff;
 }
 .header__top {
   @extend %clearfix;

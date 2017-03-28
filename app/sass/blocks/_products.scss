@@ -1,0 +1,29 @@
+.product {
+  background-color: $bg-1;
+  width: 100%;
+  padding: 25px 20px;
+  box-sizing: border-box;
+  text-align: center;
+
+}
+.product-item__img {
+  margin-bottom: 20px;
+  img {
+    max-height: 210px;
+    margin: 0 auto;
+  }
+}
+.product-item__title {
+  margin-bottom: 20px;
+}
+.product-item__buy {
+  display: inline-block;
+  vertical-align: top;
+  padding: rem(10px) rem(35px);
+  font-size: rem(18px);
+  line-height: 1;
+  font-family: $harmoniaSansProCyr;
+  font-weight: 700;
+  text-decoration: none;
+  color: $accent;
+}
