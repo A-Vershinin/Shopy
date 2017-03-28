@@ -50,7 +50,7 @@
   display: inline-block;
   vertical-align: middle;
   width: 12%;
-  margin-right: 7.5%;
+  margin-right: 5%;
 
 }
 .header__menu {
@@ -62,12 +62,11 @@
 .header__action {
   @extend %clearfix;
   width: 100%;
-  max-width: 150px;
+  max-width: 450px;
   float: right;
   padding: rem(10px) 0;
   text-align: right;
 }
-
 
 .header__search,
 .header__basket,
@@ -99,20 +98,24 @@
     }
   }
 }
-.header__search-icon:hover svg {
-  fill: red;
+.header__basket-link:hover ~ .header__basket-number  {
+  background-color: $accent;
+}
+.header__basket-link:active ~ .header__basket-number  {
+  background-color: $accent-active;
+}
+.header__search {
+  // display: block;
+
+}
+.header__search-icon {
+  // position: absolute;
 }
 .header__search-field {
   display: none;
+  // display: block;
+  width: 100%;
 }
-// .header__user-icon {
-//   display: block;
-// }
-//
-// .header__basket-link {
-//   position: relative;
-//   display: block;
-// }
 .header__basket-number {
   position: absolute;
   top: rem(-15px);

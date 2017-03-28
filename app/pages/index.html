@@ -14,6 +14,7 @@
     
     <!-- build:css css/libs.min.css -->
     <link href="../bower/normalize-css/normalize.css" rel="stylesheet">
+    <link href="../bower/bxslider-4/dist/jquery.bxslider.css">
     
     <!-- endbuild -->
     <link rel="stylesheet" href="css/style.css">
@@ -114,6 +115,36 @@
       
       <!--MAIN CONTENT-->
       <main class="content">
+        <section class="slider">
+          <div class="container">
+            <div class="slider__dots"><a href="#" data-slide-index="0"></a><a href="#" data-slide-index="1"></a><a href="#" data-slide-index="2"></a></div>
+          </div>
+          <ul class="slider__list">
+            <li class="slider__item"><img src="img/bg/bg1@1x.png" srcset="img/bg/bg1@2x.png 2x">
+              <div class="slider__info">
+                <h1 class="slider__title">Full Winter Kit</h1>
+                <div class="slider__desc">Half Jacket + Skiny Trousers + Boot leather</div>
+                <div class="slider__text">Lorem Ipsum is simply dummy text of the printing and typesetting industry t of the printing and typesetting industry</div>
+                <div class="slider__action"><span class="slider__price">Price: $120</span><span class="slider__buy">
+                    <svg width="26" height="20">
+                      <use xlink:href="img/svg-sprite.svg#icon-basket"></use>
+                    </svg>Order Now</span></div>
+              </div>
+            </li>
+            <li class="slider__item"><img src="img/bg/bg1@1x.png" srcset="img/bg/bg1@2x.png 2x">
+              <div class="slider__info">
+                <h1 class="slider__title">Full Summer Kit</h1>
+                <div class="slider__desc">Half Jacket + Skiny Trousers</div>
+                <div class="slider__text">Lorem Ipsum is simply dummy text of the printing and typesetting industry</div>
+                <div class="slider__action"><span class="slider__price">Price: $150</span><span class="slider__buy">
+                    <svg width="26" height="20">
+                      <use xlink:href="img/svg-sprite.svg#icon-basket"></use>
+                    </svg>Order Now</span></div>
+              </div>
+            </li>
+            <li class="slider__item"><img src="img/bg/bg1@1x.png" srcset="img/bg/bg1@2x.png 2x"></li>
+          </ul>
+        </section>
         <section class="arrivals">
           <div class="container"></div>
         </section>
@@ -130,8 +161,9 @@
     
     <!-- build:js js/libs.min.js -->
     <script src="../bower/jQuery/dist/jquery.min.js"></script>
+    <script src="../bower/bxslider-4/dist/jquery.bxslider.js"></script>
     
     <!-- endbuild -->
-    <script src="js/common.js" defer></script>
+    <script src="js/common.js"></script>
   </body>
 </html>

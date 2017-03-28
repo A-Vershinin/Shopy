@@ -31,6 +31,14 @@ document.addEventListener("DOMContentLoaded", function() {
       });
     }
 
+    slider();
+    function slider() {
+      $(".slider__list").bxSlider({
+        pagerCustom: ".slider__dots",
+        controls: false
+      });
+    }
+
 
   })();
 });
