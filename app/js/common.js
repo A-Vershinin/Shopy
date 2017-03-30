@@ -31,11 +31,29 @@ document.addEventListener("DOMContentLoaded", function() {
       });
     }
 
+    // слайдер на главной
     slider();
     function slider() {
       $(".slider__list").bxSlider({
         pagerCustom: ".slider__dots",
         controls: false
+      });
+    }
+    //слайдер продукта
+    itemInnerSlider();
+    function itemInnerSlider() {
+      $(".product__slider").bxSlider({
+        pagerCustom: ".product__colors",
+        controls: false
+      });
+    }
+
+    chengeColor();
+    function chengeColor() {
+      var item = $(".product__sizes-item");
+      item.click(function() {
+        $(this).toggleClass("active");
+        $(this).siblings().removeClass("active");
       });
     }
 

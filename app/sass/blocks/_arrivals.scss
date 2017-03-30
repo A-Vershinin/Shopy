@@ -35,11 +35,20 @@
 }
 .arrivals__item {
   max-width: 270px;
-  flex-basis: 270px;
+  max-height: 368px;
+  width: 23%;
   margin-bottom: rem(20px);
   box-sizing: border-box;
-  cursor: pointer;
+  // transition: opacity 1.4s;
   &:hover {
     box-shadow: 0 5px 15px rgba(0, 0, 0, 0.3);
+    .product__pre-wrap {
+      opacity: 0;
+      transition: .4s;
+    }
+    .product__next-wrap {
+      opacity: 1;
+      transition: .4s;
+    }
   }
 }
