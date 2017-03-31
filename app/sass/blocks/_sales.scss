@@ -7,15 +7,16 @@
 }
 .sales__item {
   position: relative;
-  float: left;
-  width: 100%;
-  padding: rem(35px) rem(30px);
   max-width: rem(370px);
+  width: 100%;
+  float: left;
+  padding: rem(35px) rem(30px);
   margin-right: rem(30px);
+  margin-bottom: rem(20px);
   background-color: #fff;
   transition: .3s;
   box-sizing: border-box;
-  &:nth-child(n+3) {
+  &:nth-child(3n) {
     margin-right: 0;
   }
   &:hover {
@@ -73,6 +74,7 @@
 .sales__tobuy {
   display: none;
   font-size: rem(16px);
+  line-height: 1;
   font-family: $harmoniaSansProCyr;
   font-weight: 700;
   letter-spacing: 1px;
