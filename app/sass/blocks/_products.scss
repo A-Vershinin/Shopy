@@ -5,14 +5,6 @@
   padding: rem(25px) rem(20px);
   box-sizing: border-box;
   text-align: center;
-  &:hover {
-    // .product__pre-wrap {
-    //   display: none;
-    // }
-    // .product__next-wrap {
-    //   display: none;
-    // }
-  }
 }
 .product__img {
   margin-bottom: 20px;
@@ -39,12 +31,13 @@
   opacity: 1;
 }
 .product__next-wrap {
-  position: absolute;
-  top: 25px;
-  z-index: 30;
-  margin-right: 20px;
   opacity: 0;
-  background-color: #eaeaea;
+  position: absolute;
+  z-index: 30;
+  top: 0;
+  left: 0;
+  right: 0;
+  padding: 0 rem(20px);
   .bx-wrapper {
     border: none;
     margin: 0;
@@ -81,7 +74,6 @@
   margin-bottom: rem(30px);
   cursor: pointer;
   img {
-    max-width: rem(130px);
     max-height: rem(90px);
     margin: 0 auto;
   }

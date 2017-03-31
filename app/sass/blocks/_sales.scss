@@ -1,0 +1,88 @@
+.sales {
+  margin-bottom: 120px;
+}
+.sales__list {
+  @extend %ul-reset;
+  @extend %clearfix;
+}
+.sales__item {
+  position: relative;
+  float: left;
+  width: 100%;
+  padding: rem(35px) rem(30px);
+  max-width: rem(370px);
+  margin-right: rem(30px);
+  background-color: #fff;
+  transition: .3s;
+  box-sizing: border-box;
+  &:nth-child(n+3) {
+    margin-right: 0;
+  }
+  &:hover {
+    box-shadow: 0 rem(5px) rem(15px) rgba(0, 0, 0, 0.1);
+    .sales__tobuy {
+      display: block;
+    }
+    .sales__action {
+      display: none;
+    }
+  }
+}
+.sales__item-img {
+  position: absolute;
+  z-index: 30;
+  top: rem(35px);
+  left: rem(35px);
+  display: block;
+  img {
+    width: rem(90px);
+    height: rem(90px);
+  }
+}
+.sales__info {
+  margin-left: rem(140px);
+  font-size: rem(18px);
+  font-family: $harmoniaSansProCyr;
+  text-align: left;
+  color: $gray-1;
+}
+.sales__item-title {
+  padding-top: rem(10px);
+  margin-bottom: rem(30px);
+  font-size: rem(18px);
+  font-weight: 700;
+}
+.sales__action {
+  font-size: 0;
+}
+.sales__rating {
+  display: inline-block;
+  vertical-align: top;
+  font-size: 1rem;
+  margin-right: 35px;
+}
+.sales__buy  {
+  display: inline-block;
+  vertical-align: top;
+  text-decoration: none;
+  font-size: rem(16px);
+  font-weight: 700;
+  font-family: $harmoniaSansProCyr;
+  color: $accent;
+}
+.sales__tobuy {
+  display: none;
+  font-size: rem(16px);
+  font-family: $harmoniaSansProCyr;
+  font-weight: 700;
+  letter-spacing: 1px;
+  text-align: center;
+  text-transform: lowercase;
+  text-decoration: none;
+  color: $accent;
+  cursor: pointer;
+  svg {
+    margin-right: rem(10px);
+    fill: $accent;
+  }
+}

@@ -1,0 +1,26 @@
+.section-title {
+  padding: 0 rem(20px);
+  padding-top: rem(100px);
+  padding-bottom: rem(85px);
+  font-family: $harmoniaSansProCyr;
+  text-align: center;
+  color: $gray-1;
+}
+.section-title__name {
+  margin-bottom: rem(20px);
+  font-size: rem(36px);
+  line-height: 1;
+  font-weight: 900;
+  text-transform: uppercase;
+  font-family: $HarmoniaSansProCyr-Black;
+  span {
+    color: $accent;
+    margin-right: rem(10px);
+  }
+}
+.section-title__desc {
+  color: $gray-3;
+  font-size: rem(16px);
+  line-height: rem(30px);
+  font-weight: 400;
+}
