@@ -94,13 +94,14 @@
     overflow: hidden;
   }
 }
-//обрезание текста
+//скрытие текста, аналог text-indent
 %text-overflow {
   display: block;
   overflow: hidden;
   text-overflow: ellipsis;
   white-space: nowrap;
 }
+
 @mixin inline-block($valign: top) {
   display: inline-block;
   vertical-align: $valign;

@@ -43,7 +43,7 @@ var gulp = require("gulp"), //подключаем Gulp
 gulp.task('pug', function() {
 	gulp.src("app/templates/pages/*.pug")
 		.pipe(plumber())
-		.pipe(pug({pretty: "  "}))
+		.pipe(pug({pretty:true}))
 		.on('error', notify.onError(function(error) {
 			return {
 				title: 'Pug',
