@@ -40,7 +40,9 @@
 
 }
 @media screen and #{($tablet-point-widths-des)} {
-
+  .socials__item {
+    margin-left: 20px;
+  }
 }
 @media screen and #{($phone-point-widths-des)} {
 

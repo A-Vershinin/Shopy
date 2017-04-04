@@ -24,3 +24,27 @@
   line-height: rem(30px);
   font-weight: 400;
 }
+@media screen and #{($laptop-point-widths-des)} {
+  .section-title {
+    padding-top: rem(60px);
+    padding-bottom: rem(45px);
+  }
+  .section-title__name {
+    margin-bottom: rem(10px);
+  }
+}
+@media screen and #{($tablet-point-widths-des)} {
+  .section-title__name {
+    font-size: rem(28px);
+  }
+  .section-title__desc {
+    font-size: rem(14px);
+    line-height: rem(20px);
+  }
+}
+@media screen and #{($phone-point-widths-des)} {
+  .section-title {
+    padding-top: rem(30px);
+    padding-bottom: rem(15px);
+  }
+}

@@ -4,8 +4,7 @@
   @extend %clearfix;
 }
 .news__left {
-  max-width: rem(570px);
-  width: 100%;
+  width: 50%;
   float: left;
   padding: rem(50px);
   font-family: $harmoniaSansProCyr;
@@ -30,8 +29,7 @@
   line-height: 1;
 }
 .news__right {
-  max-width: rem(570px);
-  width: 100%;
+  width: 50%;
   float: right;
   box-sizing: border-box;
 }
@@ -108,5 +106,59 @@
   border-radius: 0;
   &:hover, &:active {
     background-color: $accent-active;
+  }
+}
+@media screen and #{($laptop-point-widths-des)} {
+  .news {
+    margin-bottom: rem(50px);
+  }
+}
+@media screen and #{($tablet-point-widths-des)} {
+  .news {
+    margin-bottom: rem(30px);
+  }
+  .news__left,
+  .news__right {
+    width: 100%;
+    float: none;
+    padding: rem(20px);
+  }
+  .news__left {
+    text-align: center;
+  }
+  .news__title {
+    display: block;
+    margin-bottom: rem(15px);
+  }
+  .news__desc {
+    display: block;
+  }
+}
+@media screen and #{($phone-point-widths-des)} {
+  .news {
+    margin-bottom: rem(20px);
+  }
+  .news__left,
+  .news__right {
+    padding: rem(15px);
+  }
+  .news__form-group {
+    padding: rem(20px) rem(22px);
+  }
+  .news__form-icon {
+    left: rem(35px);
+    transform: none;
+    top: 28px;
+  }
+  .news__form-input {
+    float: none;
+    width: 100%;
+    margin-bottom: rem(15px);
+    & input:focus {
+      border-right: 1px solid $accent;
+    }
+  }
+  .news__form-btn {
+    width: 100%;
   }
 }

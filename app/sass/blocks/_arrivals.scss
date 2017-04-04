@@ -4,7 +4,7 @@
 .arrivals__list {
   @extend %ul-reset;
   display: flex;
-  flex-flow: row nowrap;
+  flex-flow: row wrap;
   justify-content: space-between;
   margin-bottom: 80px;
 }
@@ -12,7 +12,7 @@
   max-width: 270px;
   max-height: 368px;
   width: 23%;
-  margin-bottom: rem(20px);
+  margin-bottom: rem(30px);
   box-sizing: border-box;
   &:hover {
     box-shadow: 0 5px 15px rgba(0, 0, 0, 0.3);
@@ -57,4 +57,42 @@
     }
   }
 
+}
+@media screen and #{($laptop-point-widths-des)} {
+  .arrivals {
+    margin-bottom: rem(80px);
+  }
+  .arrivals__list {
+    justify-content: space-around;
+    margin-bottom: rem(50px);
+  }
+  .arrivals__item {
+    width: 40%;
+    max-width: none;
+    &:nth-child(n+5) {
+      display: none;
+    }
+  }
+}
+@media screen and #{($tablet-point-widths-des)} {
+  .arrivals {
+    margin-bottom: rem(50px);
+  }
+  .arrivals__list {
+    margin-bottom: rem(35px);
+  }
+}
+@media screen and #{($phone-point-widths-des)} {
+  .arrivals {
+    margin-bottom: rem(30px);
+  }
+  .arrivals__list {
+    margin-bottom: rem(20px);
+  }
+  .arrivals__item {
+    width: 85%;
+    &:nth-child(n+3) {
+      display: none;
+    }
+  }
 }

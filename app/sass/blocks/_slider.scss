@@ -31,6 +31,7 @@
   position: absolute;
   z-index: 30;
   top: 50%;
+  left: 5%;
   transform: translateY(-50%);
   a {
     display: block;
@@ -99,5 +100,55 @@
     line-height: 1;
     fill: $accent;
   }
+}
+@media screen and #{($laptop-point-widths-des)} {
+  .slider__dots {
 
+  }
+}
+@media screen and #{($tablet-point-widths-des)} {
+  .slider__info {
+    max-width: rem(450px);
+    left: 20%;
+  }
+  .slider__title {
+    margin-bottom: 10px;
+    font-size: rem(32px);
+  }
+  .slider__desc {
+    margin-bottom: rem(5px);
+    font-size: rem(14px);
+  }
+  .slider__text {
+    margin-bottom: rem(30px);
+    font-size: rem(13px);
+    line-height: rem(20px);
+  }
+  .slider__action {
+    font-size: rem(14px);
+    line-height: rem(18px);
+  }
+  .slider__dots {
+    a {
+      width: rem(8px);
+      height: rem(12px);
+      margin-bottom: rem(10px);
+      &.active {
+        height: rem(30px);
+        background-color: $accent;
+      }
+    }
+  }
+  .slider__item {
+    img {
+      min-height: rem(350px);
+    }
+  }
+}
+@media screen and #{($phone-point-widths-des)} {
+  .slider__item {
+    img {
+      min-height: rem(300px);
+    }
+  }
 }

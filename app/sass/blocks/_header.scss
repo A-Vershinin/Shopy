@@ -106,16 +106,9 @@
 .header__basket-link:active ~ .header__basket-number  {
   background-color: $accent-active;
 }
-.header__search {
-  // display: block;
 
-}
-.header__search-icon {
-  // position: absolute;
-}
 .header__search-field {
   display: none;
-  // display: block;
   width: 100%;
 }
 .header__basket-number {
@@ -139,8 +132,21 @@
 
 }
 @media screen and #{($tablet-point-widths-des)} {
-
+  .header__social {
+    max-width: rem(250px);
+  }
+  .header__mail {
+    margin-right: 8%;
+  }
+  .header__bottom {
+    padding: rem(20px) 0;
+  }
 }
 @media screen and #{($phone-point-widths-des)} {
 
+}
+@media screen and (max-width: 480px) {
+  .header__mail {
+    margin-bottom: rem(20px);
+  }
 }

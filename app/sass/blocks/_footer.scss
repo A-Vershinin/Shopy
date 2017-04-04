@@ -24,7 +24,7 @@
 }
 .footer__menu {
   max-width: rem(570px);
-  width: 53.5%;
+  width: 50%;
   float: left;
   @extend %clearfix;
 }
@@ -76,7 +76,7 @@
 }
 .footer__pay {
   max-width: rem(170px);
-  width: 19%;
+  width: 15%;
   float: right;
 }
 .footer__pay-title {
@@ -117,13 +117,51 @@
 }
 
 @media screen and #{($desktop-point-widths-des)} {
-
+  .footer {
+    padding-top: rem(60px);
+    padding-bottom: rem(40px);
+  }
 }
 @media screen and #{($laptop-point-widths-des)} {
-
+  .footer {
+    padding-top: rem(40px);
+    padding-bottom: rem(20px);
+  }
 }
 @media screen and #{($tablet-point-widths-des)} {
-
+  .footer__logo {
+    width: 100%;
+    float: none;
+    display: block;
+    margin: 0 auto rem(10px);
+    text-align: center;
+  }
+  .footer__menu {
+    float: none;
+    width: 100%;
+    max-width: none;
+    margin-bottom: rem(15px);
+  }
+  .footer__list {
+    max-width: none;
+    width: 30%;
+  }
+  .footer__pay {
+    width: 100%;
+    max-width: none;
+    text-align: center;
+  }
+  .footer__pay-list {
+    max-width: none;
+    float: none;
+    display: block;
+    margin: 0 auto;
+  }
 }
 @media screen and #{($phone-point-widths-des)} {
+  .footer__list {
+    float: none;
+    width: 100%;
+    margin: 0 10% rem(10px);
+  }
 }

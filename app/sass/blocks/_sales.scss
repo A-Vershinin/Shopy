@@ -7,15 +7,15 @@
 }
 .sales__item {
   position: relative;
-  max-width: rem(370px);
-  width: 100%;
+  width: 31.5%;
   float: left;
-  padding: rem(35px) rem(30px);
-  margin-right: rem(30px);
+  padding: rem(35px) 2.5%; //35 30
+  margin-right: 2.5%;
   margin-bottom: rem(20px);
   background-color: #fff;
   transition: .3s;
   box-sizing: border-box;
+  @extend %clearfix;
   &:nth-child(3n) {
     margin-right: 0;
   }
@@ -30,18 +30,16 @@
   }
 }
 .sales__item-img {
-  position: absolute;
-  z-index: 30;
-  top: rem(35px);
-  left: rem(35px);
   display: block;
+  float: left;
   img {
     width: rem(90px);
     height: rem(90px);
   }
 }
 .sales__info {
-  margin-left: rem(140px);
+  position: relative;
+  margin-left: 45%; //140
   font-size: rem(18px);
   font-family: $harmoniaSansProCyr;
   text-align: left;
@@ -55,21 +53,26 @@
 }
 .sales__action {
   font-size: 0;
+  float: left;
+  @extend %clearfix;
 }
 .sales__rating {
   display: inline-block;
   vertical-align: top;
   font-size: 1rem;
-  margin-right: 35px;
+  float: left;
+  margin-bottom: rem(10px);
 }
 .sales__buy  {
   display: inline-block;
   vertical-align: top;
+  float: left;
   text-decoration: none;
   font-size: rem(16px);
   font-weight: 700;
   font-family: $harmoniaSansProCyr;
   color: $accent;
+
 }
 .sales__tobuy {
   display: none;
@@ -83,8 +86,87 @@
   text-decoration: none;
   color: $accent;
   cursor: pointer;
+  transition: .4s ease;
   svg {
     margin-right: rem(10px);
     fill: $accent;
+  }
+}
+
+@media screen and #{($laptop-point-widths-des)} {
+  .sales {
+    margin-bottom: rem(50px);
+  }
+  .sales__item {
+    padding: rem(25px) 2%;
+  }
+  .sales__item-title {
+    font-size: rem(16px);
+  }
+  .sales__buy  {
+    margin-left: 5%;
+  }
+}
+@media screen and #{($tablet-point-widths-des)} {
+  .sales {
+    margin-bottom: rem(30px);
+  }
+  .sales__item {
+    width: 47.5%;
+    &:hover {
+      .sales__item-title {
+        padding-bottom: 29px;
+
+      }
+    }
+  }
+
+}
+@media screen and #{($phone-point-widths-des)} {
+  .sales {
+    margin-bottom: rem(20px);
+  }
+  .sales__item {
+    width: 100%;
+    float: none;
+    margin: 0 auto rem(20px);
+    padding: rem(25px) 5%;
+    &:nth-child(3n) {
+      margin: auto;
+    }
+    &:nth-child(n+3) {
+      display: none;
+    }
+    &:hover {
+      .sales__item-title {
+        padding-bottom: 0;
+      }
+    }
+  }
+  .sales__item-img {
+    float: none;
+    text-align: center;
+    margin-bottom: 10px;
+    & img {
+      display: inline-block;
+      vertical-align: top;
+    }
+  }
+  .sales__info {
+    margin-left: auto;
+  }
+  .sales__item-title {
+    margin-bottom: rem(15px);
+    padding-left: 8px;
+    text-align: center;
+  }
+  .sales__action {
+    float: none;
+  }
+  .sales__rating {
+    margin-bottom: 0;
+  }
+  .sales__buy {
+    float: right;
   }
 }
