@@ -1,0 +1,24 @@
+extends ../_template
+
+block variables
+  - var title = 'Product'
+
+block content
+
+    .wrapper
+        //HEADER
+        include ../common/_header
+        //END HEADER
+
+        |
+        |
+        //MAIN CONTENT
+        main.content
+          include ../common/_product-item
+          |
+          |
+          include ../common/_news
+        //END CONTENT
+        |
+        |
+        include ../common/_footer
