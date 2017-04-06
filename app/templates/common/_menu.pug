@@ -1,15 +1,15 @@
+
+
 nav.menu
   button(type="button" aria-label="Menu" aria-controls="navigation").hamburger.menu__hamburger.hamburger--collapse
       span.hamburger-box
         span.hamburger-inner
   ul.menu__list
-    li.menu__item
-      a(href="#javascript:void(0);").menu__link Home
-    li.menu__item
-      a(href="#javascript:void(0);").menu__link Products
-    li.menu__item
-      a(href="#javascript:void(0);").menu__link Hot Deals
-    li.menu__item
-      a(href="#javascript:void(0);").menu__link About
-    li.menu__item
-      a(href="#javascript:void(0);").menu__link Contats
+    - var items = ["Home", "Products", "Hot Deals", "About", "Contats"]
+    each menu in items
+      if menu == "Hot Deals"
+        li.menu__item
+          a(href="#").menu__link.menu__link--active=menu
+      else
+        li.menu__item
+          a(href="#").menu__link=menu

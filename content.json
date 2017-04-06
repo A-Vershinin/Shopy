@@ -1,0 +1,8 @@
+{
+  "pages" : {
+      "Home" : "/index.html",
+      "Products" : "./products",
+      "Product" : "./product"
+
+  }
+}

@@ -80,10 +80,12 @@ h1, h2, h3, h4, h5, h6, p, figure {
 }
 
 .wrapper {
+  position: relative;
   display: flex;
   flex-flow: column nowrap;
   height: 100%;
   height: 100vh;
+  overflow-x: hidden;
 }
 .wrapper > .header,
 .wrapper > .footer {

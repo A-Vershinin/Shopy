@@ -1,0 +1,39 @@
+.filters {
+  width: 23%; //270
+  float: left;
+  margin-right: 2.5%; //30
+  background-color: #599999;
+}
+.filter-item {
+  padding: rem(40px);
+  background-color: #fff;
+}
+.filter-item__title {
+  margin-bottom: rem(30px);
+  font-family: $HarmoniaSansProCyr-Black;
+  font-size: rem(18px);
+  font-weight: 900;
+  color: $accent;
+}
+.fliter-line {
+  margin-bottom: rem(15px);
+  &:last-child {
+    margin-bottom: 0;
+  }
+  label {
+    color: $gray-1;
+    font-family: "Harmonia Sans Pro Cyr";
+    font-size: rem(16px);
+    font-weight: 700;
+    line-height: rem(30px);
+  }
+  input[type="radio"] {
+    display: none;
+  }
+}
+
+// color: $gray-1;
+// font-family: "Harmonia Sans Pro Cyr";
+// font-size: rem(16px);
+// font-weight: 700;
+// line-height: 50px;

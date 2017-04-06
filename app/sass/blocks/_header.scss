@@ -51,7 +51,7 @@
   display: inline-block;
   vertical-align: middle;
   width: 12.5%;
-  width: 120px;
+  width: rem(120px);
   margin-right: 2.55%;
 
 }
@@ -68,6 +68,7 @@
   float: right;
   padding: rem(10px) 0;
   text-align: right;
+  transition: left .5s;
 }
 
 .header__search,
@@ -143,7 +144,41 @@
   }
 }
 @media screen and #{($phone-point-widths-des)} {
-
+  .header__action {
+    position: absolute;
+    left: rem(-1000px);
+      &--mobile {
+        position: absolute;
+        z-index: 50;
+        top: 0;
+        left: 1px;
+        display: block;
+        max-width: 79.7%;
+        width: 100%;
+        padding: rem(23px) 0;
+        background-color: #f0f0f2;
+        border-bottom: 1px solid $accent;
+        .header__search,
+        .header__user,
+        .header__basket {
+          display: block;
+        }
+      }
+  }
+  .header__search {
+    float: left;
+    margin-left: 20px;
+  }
+  .header__user {
+    float: right;
+  }
+  .header__basket {
+    float: right;
+    margin-right: 1.25rem;
+  }
+  .header__basket-number {
+    left: 0.45rem;
+  }
 }
 @media screen and (max-width: 480px) {
   .header__mail {

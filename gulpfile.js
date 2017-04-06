@@ -29,6 +29,7 @@ var gulp = require("gulp"), //подключаем Gulp
     replace = require('gulp-replace'), //фиксинг некоторых багов
     cache = require('gulp-cache'), //кешируем
     cheerio = require('gulp-cheerio'), //вспомогательный плагин
+    fs = require("fs"),
     server = require("browser-sync").create(); //браузер-синк(слежение в браузере)
 
 
@@ -41,9 +42,14 @@ var gulp = require("gulp"), //подключаем Gulp
 
 //pug
 gulp.task('html', function() {
+  var content = require("./content.json");
+
 	gulp.src("app/templates/pages/*.pug")
 		.pipe(plumber())
-		.pipe(pug({pretty: "\t"}))
+		.pipe(pug({
+      locals: content,
+      pretty: "\t"
+    }))
 		.on('error', notify.onError(function(error) {
 			return {
 				title: 'Pug',
