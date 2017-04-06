@@ -1,0 +1,70 @@
+section.product-view
+  .container
+    .product-view__gallary
+      ul.product-view__gallary-list
+        li.product-view__gallary-item
+          picture
+            img(src="img/content/s-item2@1x.png", srcset="img/content/s-item2@2x.png 2x",
+              title="Product1", alt="Product1")
+        li.product-view__gallary-item
+          picture
+            img(src="img/content/s-item2@1x.png", srcset="img/content/s-item2@2x.png 2x",
+              title="Product1", alt="Product1")
+        li.product-view__gallary-item
+          picture
+            img(src="img/content/s-item2@1x.png", srcset="img/content/s-item2@2x.png 2x",
+              title="Product1", alt="Product1")
+      .product-view__gallary-pager
+        a(href="#", data-slide-index="0")
+          picture
+            img(src="img/content/s-item2-sm@1x.png", srcset="img/content/s-item2-sm@2x.png 2x",
+              title="Product1", alt="Product1")
+        a(href="#", data-slide-index="1")
+          picture
+            img(src="img/content/s-item2-sm2@1x.png", srcset="img/content/s-item2-sm2@2x.png 2x",
+              title="Product1", alt="Product1")
+        a(href="#", data-slide-index="2")
+          picture
+            img(src="img/content/s-item2@1x.png", srcset="img/content/s-item2@2x.png 2x",
+              title="Product1", alt="Product1")
+    .product-view__about
+      h2.product-view__title FULL WINTER KIT
+      div.product-view__desc Half Jacket + Skiny Trousers + Boot leather
+      p.product-view__text 	Lorem ipsum dolor sit amet, consectetur adipisicing elit. Sequi cum minima dolor corrupti quasi! Dicta
+        |Lorem ipsum dolor sit amet, consectetur adipisicing elit. Iusto minima harum corporis
+        |.
+      .product-view__settings
+        .product-view__size
+          span.product-view__size-title Choos Size
+          ul.product-view__size-list
+            li.product-view__size-item
+              span s
+            li.product-view__size-item
+              span m
+            li.product-view__size-item
+              span l
+            li.product-view__size-item
+              span xl
+        .product-view__quantify
+          span.product-view__quantify-title Choos Quantify
+          .product-view__quantify-wrap
+            span.product-view__quantify-prev +
+            span.product-view__quantify-count 3
+            span.product-view__quantify-next -
+      .product-view__actions
+        .product-view__price
+          span Price:
+          span 120$
+        .product-view__buttons
+          .product-view__buttons-share
+            a(href="javascript:void(0);").product-view__button-web
+              svg(width="20", height="20")
+                use(xlink:href="img/svg-sprite.svg#icon-share")
+            a(href="javascript:void(0);").product-view__button-buy
+              svg(width="20", height="20")
+                use(xlink:href="img/svg-sprite.svg#icon-basket")
+            a(href="javascript:void(0);").product-view__button-favorite
+              svg(width="20", height="20")
+                use(xlink:href="img/svg-sprite.svg#icon-like")
+          .product-view__buttons-order
+            a(href="javascript:void(0);").btn.product-view__btn Ordern Now

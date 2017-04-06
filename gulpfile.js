@@ -12,6 +12,7 @@ var gulp = require("gulp"), //подключаем Gulp
     uncss = require('gulp-uncss'), //удалямем не использованный css
     rename = require("gulp-rename"), //переименовываем файлы
     imagemin = require("gulp-imagemin"), //сжимаем картинки
+    pngquant = require('imagemin-pngquant'), //обработка картинок
     spritesmith = require('gulp.spritesmith'), //собираем png-спрайт
     svgstore = require("gulp-svgstore"), //собираем svg-спрайт
     svgmin = require("gulp-svgmin"), //сжимаем svg
@@ -22,14 +23,13 @@ var gulp = require("gulp"), //подключаем Gulp
     del = require("del"), //удаляем файлы
     sourcemaps = require('gulp-sourcemaps'), //добавление путей в файлы
     notify = require('gulp-notify'), //представление ошибок в удобном виде
-    compass = require('gulp-compass'),
     useref = require('gulp-useref'), //объединение файлов в один по указанной разметке в комментариях.
     gulpif = require('gulp-if'), //выполение при условиях
     wiredep = require('gulp-wiredep'), //добавление ссылок на плагины bower.
     replace = require('gulp-replace'), //фиксинг некоторых багов
     cache = require('gulp-cache'), //кешируем
     cheerio = require('gulp-cheerio'), //вспомогательный плагин
-    server = require("browser-sync"); //браузер-синк(слежение в браузере)
+    server = require("browser-sync").create(); //браузер-синк(слежение в браузере)
 
 
 // var production = process.env.NODE_ENV === 'production';
@@ -40,7 +40,7 @@ var gulp = require("gulp"), //подключаем Gulp
 
 
 //pug
-gulp.task('pug', function() {
+gulp.task('html', function() {
 	gulp.src("app/templates/pages/*.pug")
 		.pipe(plumber())
 		.pipe(pug({pretty: "\t"}))
@@ -99,13 +99,19 @@ gulp.task("JsChange", function () {
 
 gulp.task("serve", function() {
   server.init({
-    server: "build",
+    server: {
+      baseDir: "./build"
+    },
+    browser: "chrome",
     notify: false,
     open: true,
-    ui: false
+    ui: false,
+    port: 3000,
+    // tunnel: true,
+    logPrefix: "front-end"
   });
 
-  gulp.watch("app/templates/**/*.pug", ["pug"]);
+  gulp.watch("app/templates/**/*.pug", ["html"]);
   gulp.watch("app/sass/**/*.{scss,sass}", ["styles"]);
   gulp.watch("app/js/*.js", ["JsChange"]);
   gulp.watch("app/pages/*.html", ["useref"]);
@@ -140,10 +146,17 @@ gulp.task('useref', function() {
 // Оптимизация картинок
 gulp.task("images", function() {
   return gulp.src("build/img/**/*.{png,jpg,gif}")
-    .pipe(imagemin([
-      imagemin.optipng({optimizationLevel: 3}),
-      imagemin.jpegtran({progressive: true})
-    ]))
+    // .pipe(imagemin([
+    //   imagemin.optipng({optimizationLevel: 3}),
+    //   imagemin.jpegtran({progressive: true})
+    // ]))
+    .pipe((imagemin({
+        optimizationLevel: 5,
+        progressive: true,
+        svgoPlugins: [{removeViewBox: false}],
+        use: [pngquant()],
+        interlaced: true
+      })))
     // .pipe(imagemin({ optimizationLevel: 5, progressive: true, interlaced: true }))
     // используем кеширование для избежания пересжатия уже сжатых изображений каждый раз при запусске задач.
     // нужнен плагин gulp-cahce
@@ -203,9 +216,9 @@ gulp.task("extras", function() {
 //css-библиотеки
 gulp.task("css:vendor", function() {
   return gulp.src("build/css/vendor.css")
-  // .pipe(uncss({ //чистим файл от неиспользованного css
-  //   html: ['build/*.html']
-  // }))
+  .pipe(uncss({ //чистим файл от неиспользованного css
+    html: ['build/*.html']
+  }))
   .pipe(csso())
   .pipe(rename({suffix: '.min'}))
   .pipe(gulp.dest("build/css"));
@@ -252,7 +265,7 @@ gulp.task("icon-fonts", function() {
 gulp.task("build", function(fn) {
   run(
     "clean",
-    "pug",
+    "html",
     "copy",
     "useref",
     "styles",

@@ -51,6 +51,14 @@ document.addEventListener("DOMContentLoaded", function() {
         controls: false
       });
     }
+    // слайдер на странице товара
+    sliderProductItem();
+    function sliderProductItem() {
+      $(".product-view__gallary-list").bxSlider({
+        pagerCustom: ".product-view__gallary-pager",
+        controls: false
+      });
+    }
     //слайдер продукта
     itemInnerSlider();
     function itemInnerSlider() {
