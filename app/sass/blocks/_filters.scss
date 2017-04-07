@@ -1,10 +1,12 @@
 .filters {
-  width: 23%; //270
+  // width: 23%; //270
   float: left;
-  margin-right: 2.5%; //30
-  background-color: #599999;
+  width: 270px;
+  // margin-right: 2.5%; //30
+  margin-right: 30px;
 }
 .filter-item {
+  margin-bottom: rem(28px);
   padding: rem(40px);
   background-color: #fff;
 }
@@ -17,23 +19,201 @@
 }
 .fliter-line {
   margin-bottom: rem(15px);
+  cursor: pointer;
+
   &:last-child {
     margin-bottom: 0;
   }
   label {
+    position: relative;
+    display: block;
     color: $gray-1;
-    font-family: "Harmonia Sans Pro Cyr";
     font-size: rem(16px);
-    font-weight: 700;
     line-height: rem(30px);
+    font-family: "Harmonia Sans Pro Cyr";
+    font-weight: 700;
+    cursor: pointer;
   }
   input[type="radio"] {
     display: none;
+    & + label {
+      &::after {
+        content: "";
+        position: absolute;
+        z-index: 30;
+        bottom: 0;
+        left: 0;
+        width: 0;
+        height: 2px;
+        background-color: $accent;
+        transition: .4s ease;
+      }
+      &:hover::after {
+        width: 100%;
+      }
+    }
+    &:checked + label {
+      color: $accent;
+      &::after {
+        content: "";
+        position: absolute;
+        z-index: 30;
+        bottom: 0;
+        left: 0;
+        width: 0;
+        height: 2px;
+        width: 100%;
+        background-color: $accent;
+      }
+    }
+  }
+  input[type="checkbox"] {
+    display: none;
+    & + label {
+      padding-left: rem(26px);
+      position: relative;
+      &::before, &::after {
+        content: "";
+        position: absolute;
+        z-index: 30;
+        top: 50%;
+        transform: translateY(-50%);
+        left: 0;
+        display: block;
+        width: rem(13px);
+        height: rem(13px);
+        background-color: #edf0f2;
+      }
+      &::after {
+        z-index: 40;
+        top: 15px;
+        left: 4px;
+        width: 5px;
+        height: 5px;
+        background-color: $bg-1;
+      }
+    }
+    &:checked + label {
+      color: $accent;
+      &::before, &::after {
+      }
+      &::before {
+        background-color: $accent;
+      }
+      &::after {
+        background-color: $bg-1;
+      }
+    }
+  }
+}
+.fliter-item__range {
+  margin-bottom: 20px;
+}
+.fliter-item__range-controls {
+  position: relative;
+  height: rem(70px);
+  overflow: hidden;
+}
+.fliter-item__numbers {
+  @extend %clearfix;
+  line-height: rem(25px);
+}
+.fliter-item__numbers-left {
+  float: left;
+  width: 40%;
+  margin-left: 10%;
+  box-sizing: border-box;
+  text-align: left;
+  span {
+    font-size: rem(14px);
+    font-weight: 700;
+    font-family: $harmoniaSansProCyr;
+    color: $gray-1;
+  }
+}
+.fliter-item__numbers-right {
+  float: right;
+  width: 40%;
+  margin-left: 10%;
+  box-sizing: border-box;
+  text-align: center;
+}
+.fliter-item__scale {
+  margin-top: rem(18px);
+  height: 2px;
+  background-color: #edf0f2;
+}
+.fliter-item__bar {
+  height: 2px;
+  margin-left: 22%;
+  margin-right: 22%;
+  background-color: $gray-1;
+  cursor: pointer;
+}
+.fliter-item__toggle {
+  position: absolute;
+  top: rem(36px);
+  left: rem(30px);
+  width: rem(4px);
+  height: rem(4px);
+  border: 6px solid $gray-1;
+  background-color: $gray-1;
+  cursor: pointer;
+  border-radius: 50%;
+  &--min {
+    left: 15%;
+  }
+  &--max {
+    left: 77%;
+  }
+}
+.fliter-item__price-controls {
+  position: relative;
+  font-size: 0;
+}
+.fliter-item__price {
+  display: inline-block;
+  vertical-align: middle;
+  font-size: 0;
+  line-height: rem(25px);
+  font-weight: 700;
+  font-family: $harmoniaSansProCyr;
+  color: $gray-1;
+  &:first-child {
+    margin-right: rem(15px);
+  }
+  span {
+    display: inline-block;
+    vertical-align: middle;
+    margin-right: rem(10px);
+    font-size: 1rem;
+  }
+}
+.fliter-item__price-field {
+  display: inline-block;
+  vertical-align: middle;
+  width: rem(45px);
+  padding: rem(2px);
+  font-size: 1rem;
+  line-height: rem(25px);
+  background-color: #edf0f2;
+  text-align: center;
+  border: none;
+  border-radius: 0;
+  outline: none;
+  &:focus {
+    outline: none;
   }
 }
 
-// color: $gray-1;
-// font-family: "Harmonia Sans Pro Cyr";
-// font-size: rem(16px);
-// font-weight: 700;
-// line-height: 50px;
+
+
+@media screen and #{($laptop-point-widths-des)} {
+
+}
+@media screen and #{($tablet-point-widths-des)} {
+
+}
+@media screen and #{($phone-point-widths-des)} {
+
+}

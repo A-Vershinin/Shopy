@@ -1,6 +1,7 @@
 .cards {
-  float: right;
-  width: 74.5%; //870
+  // width: 74.5%; //870
+  // margin-left: 25.5%;
+  margin-left: 300px;
   background-color: #999444;
 }
 .cards__list {
@@ -11,11 +12,10 @@
   align-items: center;
 }
 .cards__item {
-  max-height: rem(368px);
+  max-height: 368px;
   display: block;
-  // width: 31%;
-  flex-basis: rem(270px);
-  margin-bottom: rem(30px);
+  width: 31%;
+  margin-bottom: 30px;
   &:hover {
     box-shadow: 0 5px 15px rgba(0, 0, 0, 0.3);
     .product__pre-wrap {

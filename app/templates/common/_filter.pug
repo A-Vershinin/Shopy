@@ -14,12 +14,55 @@ aside.filters
         input(type="radio" name="filter-cat" id="filter-cat-four")
         label(for="filter-cat-four") Hot Deals
 
-
-      //-
-      //- ul.filter-item__list
-      //-   - var items = ["Man", "Women", "Childrens", "Hot Deals"]
-      //-   each filter in items
-      //-     li.filter-item__item=filter
-
     .filter-item
       h3.filter-item__title Price Filtter
+      .fliter-item__range
+        .fliter-item__range-controls
+          .fliter-item__numbers
+            .fliter-item__numbers-left
+              span 100
+              |$
+            .fliter-item__numbers-right
+              span 1000
+              |$
+          .fliter-item__scale
+            .fliter-item__bar
+          .fliter-item__toggle.fliter-item__toggle--min
+          .fliter-item__toggle.fliter-item__toggle--max
+      .fliter-item__price-controls
+        .fliter-item__price
+          span From
+          input(type="text" name="price-min" value=" ").fliter-item__price-field
+        .fliter-item__price
+          span To
+          input(type="text" name="price-max" value=" ").fliter-item__price-field
+
+    .filter-item
+      h3.filter-item__title Sizes
+      .fliter-line
+        input(type="checkbox" name="small" id="filter-size-small" checked)
+        label(for="filter-size-small") Small
+      .fliter-line
+        input(type="checkbox" name="medium" id="filter-size-medium")
+        label(for="filter-size-medium") Medium
+      .fliter-line
+        input(type="checkbox" name="larg" id="filter-size-large")
+        label(for="filter-size-large") Larg
+      .fliter-line
+        input(type="checkbox" name="xlarg" id="filter-size-xlarge")
+        label(for="filter-size-xlarge") X larg
+
+    .filter-item
+      h3.filter-item__title Brands
+      .fliter-line
+        input(type="checkbox" name="brand-one" id="filter-brand-one" checked)
+        label(for="filter-brand-one") Reebok
+      .fliter-line
+        input(type="checkbox" name="brand-two" id="filter-brand-two")
+        label(for="filter-brand-two") Addidas
+      .fliter-line
+        input(type="checkbox" name="brand-three" id="filter-brand-three")
+        label(for="filter-brand-three") Nike
+      .fliter-line
+        input(type="checkbox" name="brand-four" id="filter-brand-four")
+        label(for="filter-brand-four") Active
