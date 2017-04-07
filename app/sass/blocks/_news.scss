@@ -112,6 +112,9 @@
   .news {
     margin-bottom: rem(50px);
   }
+  .news__form-group {
+    padding: rem(45px) rem(42px);
+  }
 }
 @media screen and #{($tablet-point-widths-des)} {
   .news {
@@ -133,6 +136,10 @@
   .news__desc {
     display: block;
   }
+  .news__form-group {
+    padding: rem(25px) rem(42px);
+  }
+
 }
 @media screen and #{($phone-point-widths-des)} {
   .news {

@@ -6,7 +6,6 @@ $HarmoniaSansProCyr-Black: "HarmoniaSansProCyr-Black", "Arial", sans-serif;
 //Цвета, фон//
 $accent: #ff5912;
 $accent-active: darken($accent, 20%);
-
 $gray-1: #34404b;
 $gray-2: #3c4751;
 $gray-3: #495662;
@@ -52,7 +51,7 @@ $tablet-point-widths: "(min-width: 576px)";
 //Desktop//
 $desktop-point-widths-des: "(max-width: 1200px)";
 $laptop-point-widths-des: "(max-width: 992px)";
-$tablet-point-widths-des: "(max-width: 800px)";
+$tablet-point-widths-des: "(max-width: 768px)";
 $phone-point-widths-des: "(max-width: 576px)";
 
 //макс-ширина на устройствах//
