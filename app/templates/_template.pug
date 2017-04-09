@@ -56,9 +56,16 @@ html(lang="en").no-js
     block content
     |
     |
+    <!-- build:js js/polyfills.min.js -->
+    script(src="../bower/picturefill/dist/picturefill.js")
+    <!-- endbuild -->
+    |
+    |
     <!-- build:js js/libs.min.js -->
     script(src="../bower/jQuery/dist/jquery.min.js")
     script(src="../bower/bxslider-4/dist/jquery.bxslider.js")
+    script(src="../bower/nouislider/distribute/nouislider.js")
+    script(src="../bower/jquery-ui-touch-punch/jquery.ui.touch-punch.js")
     |
     |
     <!-- endbuild -->

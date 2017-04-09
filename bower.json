@@ -5,6 +5,7 @@
     "picturefill": "^3.0.2",
     "jquery": "^3.1.1",
     "bxslider-4": "bx-slider.js#^4.2.12",
-    "css-hamburgers": "^0.8.1"
+    "css-hamburgers": "^0.8.1",
+    "nouislider": "^9.2.0"
   }
 }

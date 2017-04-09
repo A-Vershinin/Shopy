@@ -147,7 +147,7 @@
 											<div class="fliter-item__numbers-left"><span>100</span>$</div>
 											<div class="fliter-item__numbers-right"><span>1000</span>$</div>
 										</div>
-										<div class="fliter-item__scale">
+										<div class="fliter-item__scale" id="filterRange">
 											<div class="fliter-item__bar"></div>
 										</div>
 										<div class="fliter-item__toggle fliter-item__toggle--min"></div>
@@ -156,10 +156,10 @@
 								</div>
 								<div class="fliter-item__price-controls">
 									<div class="fliter-item__price"><span>From</span>
-										<input class="fliter-item__price-field" type="text" name="price-min" value=" ">
+										<input class="fliter-item__price-field" type="text" name="price-min" value=" " id="minPriceFieled">
 									</div>
 									<div class="fliter-item__price"><span>To</span>
-										<input class="fliter-item__price-field" type="text" name="price-max" value=" ">
+										<input class="fliter-item__price-field" type="text" name="price-max" value=" " id="maxPriceField">
 									</div>
 								</div>
 							</div>
@@ -641,9 +641,14 @@
 			<!--END FOOTER-->
 		</div>
 		
+		<!-- build:js js/polyfills.min.js -->
+		<script src="../bower/picturefill/dist/picturefill.js"></script><!-- endbuild -->
+		
 		<!-- build:js js/libs.min.js -->
 		<script src="../bower/jQuery/dist/jquery.min.js"></script>
 		<script src="../bower/bxslider-4/dist/jquery.bxslider.js"></script>
+		<script src="../bower/nouislider/distribute/nouislider.js"></script>
+		<script src="../bower/jquery-ui-touch-punch/jquery.ui.touch-punch.js"></script>
 		
 		<!-- endbuild -->
 		<script src="js/common.js"></script>

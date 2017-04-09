@@ -67,6 +67,56 @@ document.addEventListener("DOMContentLoaded", function() {
         controls: false
       });
     }
+    filterSlider();
+    function filterSlider() {
+      var rangeControls = document.getElementById('filterRange');
+      // var rangeControls = document.getElementsByClassName('fliter-item__scale');
+      var minPrice = document.getElementsByClassName('fliter-item__toggle--min');
+      var maxPrice = document.getElementsByClassName('fliter-item__toggle--max');
+      var minPriceWrap = document.getElementById('minPriceFieled');
+      var maxPriceWrap = document.getElementById('maxPriceField');
+
+      // if (rangeControls) {
+        noUiSlider.create(rangeControls, {
+          start: [0, 2000],
+          connect: true,
+          range: {
+            'min': 0,
+            'max': 2000
+          },
+          // lower: [
+          //   new Link({
+          //     target: minPriceWrap
+          //   })
+          // ],
+          // upper: [
+          //   new Link({
+          //     target: maxPriceWrap
+          //   })
+          // ]
+        });
+
+        // Updating input value on slider handle
+        // rangeControls.noUiSlider.on('update', function ( values, handle ) {
+        //   if ( handle == 0 ) {
+        //     minPrice.value = parseInt(values[handle], 10);
+        //   } else if ( handle == 1 ) {
+        //     maxPrice.value = parseInt(values[handle], 10);
+        //   }
+        // });
+        //
+        // // Updating handle position on input value changing
+        // minPrice.addEventListener('change', function ( ) {
+        //   rangeControls.noUiSlider.set([this.value, null]);
+        // });
+        //
+        // maxPrice.addEventListener('change', function ( ) {
+        //   rangeControls.noUiSlider.set([null, this.value]);
+        // });
+      // }
+
+
+    }
 
     chengeColor();
     function chengeColor() {

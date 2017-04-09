@@ -38,7 +38,7 @@
     vertical-align: top;
     width: rem(95px);
     height: rem(70px);
-    margin: 0 2.25%; //10
+    margin: 0 2.25% 10px; //10
     font-size: 1rem;
     text-align: center;
     text-decoration: none;
@@ -278,8 +278,21 @@
 
 }
 @media screen and #{($tablet-point-widths-des)} {
-
+  .product-view__gallary,
+  .product-view__about {
+    float: none;
+    width: 100%;
+  }
+  .product-view__gallary {
+    margin-bottom: rem(20px);
+  }
+  .product-view__title,
+  .product-view__desc {
+    text-align: center;
+  }
 }
 @media screen and #{($phone-point-widths-des)} {
-
+  .product-view__size-list {
+    margin-top: rem(20px);
+  }
 }
