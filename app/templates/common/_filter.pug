@@ -18,17 +18,18 @@ aside.filters
       h3.filter-item__title Price Filtter
       .fliter-item__range
         .fliter-item__range-controls
-          .fliter-item__numbers
-            .fliter-item__numbers-left
+          .fliter-item__numbers-left
+            .fliter-item__toggle.fliter-item__toggle--min
+            .fliter-item__tooltip-left
               span 100
-              |$
-            .fliter-item__numbers-right
-              span 1000
               |$
           .fliter-item__scale#filterRange
             .fliter-item__bar
-          .fliter-item__toggle.fliter-item__toggle--min
-          .fliter-item__toggle.fliter-item__toggle--max
+          .fliter-item__numbers-right
+            .fliter-item__toggle.fliter-item__toggle--max
+            .fliter-item__tooltip-right
+              span 1000
+              |$
       .fliter-item__price-controls
         .fliter-item__price
           span From

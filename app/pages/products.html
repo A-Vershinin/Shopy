@@ -16,6 +16,7 @@
 		<link href="../bower/normalize-css/normalize.css" rel="stylesheet">
 		<link href="../bower/bxslider-4/dist/jquery.bxslider.css">
 		<link href="../bower/css-hamburgers/dist/hamburgers.css">
+		<link href="../bower/nouislider/distribute/nouislider.css">
 		
 		<!-- endbuild -->
 		<link rel="stylesheet" href="css/style.css">
@@ -143,15 +144,17 @@
 								<h3 class="filter-item__title">Price Filtter</h3>
 								<div class="fliter-item__range">
 									<div class="fliter-item__range-controls">
-										<div class="fliter-item__numbers">
-											<div class="fliter-item__numbers-left"><span>100</span>$</div>
-											<div class="fliter-item__numbers-right"><span>1000</span>$</div>
+										<div class="fliter-item__numbers-left">
+											<div class="fliter-item__toggle fliter-item__toggle--min"></div>
+											<div class="fliter-item__tooltip-left"><span>100</span>$</div>
 										</div>
 										<div class="fliter-item__scale" id="filterRange">
 											<div class="fliter-item__bar"></div>
 										</div>
-										<div class="fliter-item__toggle fliter-item__toggle--min"></div>
-										<div class="fliter-item__toggle fliter-item__toggle--max"></div>
+										<div class="fliter-item__numbers-right">
+											<div class="fliter-item__toggle fliter-item__toggle--max"></div>
+											<div class="fliter-item__tooltip-right"><span>1000</span>$</div>
+										</div>
 									</div>
 								</div>
 								<div class="fliter-item__price-controls">
@@ -647,6 +650,7 @@
 		<!-- build:js js/libs.min.js -->
 		<script src="../bower/jQuery/dist/jquery.min.js"></script>
 		<script src="../bower/bxslider-4/dist/jquery.bxslider.js"></script>
+		<script src="../bower/wnumb/wNumb.js"></script>
 		<script src="../bower/nouislider/distribute/nouislider.js"></script>
 		<script src="../bower/jquery-ui-touch-punch/jquery.ui.touch-punch.js"></script>
 		

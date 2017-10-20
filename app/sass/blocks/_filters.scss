@@ -7,7 +7,7 @@
 }
 .filter-item {
   margin-bottom: rem(28px);
-  padding: rem(40px);
+  padding: rem(40px) rem(30px);
   background-color: #fff;
   box-sizing: border-box;
 }
@@ -61,7 +61,6 @@
         z-index: 30;
         bottom: 0;
         left: 0;
-        width: 0;
         height: 2px;
         width: 100%;
         background-color: $accent;
@@ -108,7 +107,7 @@
   }
 }
 .fliter-item__range {
-  margin-bottom: 20px;
+  margin-bottom: 10px;
 }
 .fliter-item__range-controls {
   position: relative;
@@ -126,28 +125,22 @@
   box-sizing: border-box;
   text-align: left;
 }
-.fliter-item__numbers-right {
-  float: right;
-  width: 40%;
-  margin-left: 10%;
-  box-sizing: border-box;
-  text-align: center;
+.fliter-item__tooltip-left,
+.fliter-item__tooltip-right {
+  position: absolute;
+  z-index: 40;
+  top: 0;
 }
-.fliter-item__scale {
-  margin-top: rem(18px);
-  height: 2px;
-  background-color: #edf0f2;
+.fliter-item__tooltip-left {
+  left: 16px;
 }
-.fliter-item__bar {
-  height: 2px;
-  margin-left: 22%;
-  margin-right: 22%;
-  background-color: $gray-1;
-  cursor: pointer;
+.fliter-item__tooltip-right {
+  right: 16px;
 }
 .fliter-item__toggle {
   position: absolute;
-  top: rem(36px);
+  z-index: 50;
+  top: rem(32px);
   left: rem(30px);
   width: rem(4px);
   height: rem(4px);
@@ -161,6 +154,25 @@
   &--max {
     left: 77%;
   }
+}
+.fliter-item__scale {
+  margin-top: rem(40px);
+  height: 2px;
+  background-color: #edf0f2;
+}
+.fliter-item__bar {
+  height: 2px;
+  margin-left: 22%;
+  margin-right: 22%;
+  background-color: $gray-1;
+  cursor: pointer;
+}
+.fliter-item__numbers-right {
+  float: right;
+  width: 40%;
+  margin-left: 10%;
+  box-sizing: border-box;
+  text-align: center;
 }
 .fliter-item__price-controls {
   position: relative;
@@ -188,7 +200,7 @@
 .fliter-item__price-field {
   display: inline-block;
   vertical-align: middle;
-  width: rem(45px);
+  width: rem(60px);
   padding: rem(2px);
   font-size: 1rem;
   line-height: rem(25px);
@@ -217,6 +229,108 @@
   &:hover {
     background-color: $accent-active;
   }
+}
+
+.fliter-item__range-controls.noUi-target {
+  .fliter-item__numbers-left,
+  .fliter-item__scale,
+  .fliter-item__numbers-right {
+    display: none;
+  }
+}
+.fliter-item__range-controls.noUi-target {
+  height: rem(50px);
+  padding-top: rem(30px);
+  background: transparent;
+  border: none;
+  border-radius: 0;
+  box-shadow: none;
+}
+
+.noUi-connect {
+  height: 4px;
+  background: $accent;
+  cursor: pointer;
+  box-shadow: none;
+}
+
+.noUi-base {
+  width: 84%;
+  margin: 0 auto;
+  margin-right: 10%;
+  &::before {
+    content: "";
+    position: absolute;
+    left: 0;
+    right: 0;
+    z-index: -1;
+    display: block;
+    height: 3px;
+    width: 100%;
+    background-color: rgba($gray-1, .7);
+  }
+}
+.noUi-handle-upper .noUi-tooltip {
+  margin-left: rem(-8px);
+}
+.noUi-handle {
+  position: absolute;
+  z-index: 50;
+  top: rem(32px);
+  left: rem(30px);
+  width: rem(4px);
+  height: rem(4px);
+  border: 6px solid $accent;
+  background-color: $accent;
+  cursor: pointer;
+  border-radius: 50%;
+  border: 0;
+  box-shadow: none;
+  &::after {
+    display: none;
+  }
+  &::before {
+    display: block;
+    position: absolute;
+    height: rem(2px);
+    width: rem(2px);
+    left: 50%;
+    top: 50%;
+    transform: translate(-50%, -50%);
+    background: $gray-1;
+    border-radius: 50%;
+    border: 1px solid $gray-1;
+  }
+}
+.noUi-handle.noUi-active {
+  box-shadow: 0 0 3px 6px rgba($accent, 0.25);
+  transition: 0.25s ease-in-out;
+}
+.noUi-horizontal .noUi-handle {
+  width: rem(16px);
+  height: rem(16px);
+  left: rem(30px);
+  top: rem(-5px);
+}
+.noUi-handle.noUi-handle-lower {
+  left: 20%;
+  margin-left: rem(-10px);
+}
+.noUi-handle.noUi-handle-upper {
+  left: 75%;
+  margin-left: rem(-2px);
+}
+.noUi-tooltip {
+  position: absolute;
+  z-index: 30;
+  display: block;
+  padding: 0;
+  text-align: center;
+  font-size: rem(16px);
+  color: #000;
+  background: transparent;
+  border: 0;
+  border-radius: 0;
 }
 
 
